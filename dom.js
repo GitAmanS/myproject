@@ -16,4 +16,10 @@ thirdItem.style.color = 'green';
 
 var allEl = document.querySelectorAll('.list-group-item');
 
-allEl.style.fontWeight = 'bold';
+
+
+var bytag = document.getElementsByTagName('li');
+
+for(var i = 0; i<bytag.length; i++){
+    bytag[i].style.border = '1px solid black';
+}
