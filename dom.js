@@ -10,3 +10,10 @@ var additems = document.getElementsByClassName('title')[0];
 
 additems.style.color = 'green';
 additems.style.fontWeight = 'bold';
+
+var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.color = 'green';
+
+var allEl = document.querySelectorAll('.list-group-item');
+
+allEl.style.fontWeight = 'bold';
