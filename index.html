@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-box {
+            width: 50%;
+            height: fit-content;
+            padding: 20px;
+            border: 2px solid orange;
+            border-radius: 10px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <form id="contactForm">
+            <h1 style="text-align: center; color: orange;">Book a call</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            
+            <label for="time">Time to Call:</label>
+            <div style="display: flex; margin-bottom: 20px; justify-content: space-between;">
+                <input type="date" id="date" name="date" style="width: 45%;" required><br><br>
+                <input type="time" id="time" name="time" style="width: 45%;" required><br><br>
+            </div>
+            
+            <input class="btn" type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            console.log("Name: " + document.getElementById("name").value);
+            console.log("Email: " + document.getElementById("email").value);
+            console.log("Phone: " + document.getElementById("phone").value);
+            console.log("Date to Call: " + document.getElementById("date").value);
+            console.log("Time to Call: " + document.getElementById("time").value);
+        });
+        
+        const btn = document.querySelector('.btn');
+        btn.addEventListener('mouseover', (e) => {
+            e.preventDefault();
+            btn.style.backgroundColor = 'orangered';
+        });
+        btn.addEventListener('mouseout', (e) => {
+            e.preventDefault();
+            btn.style.backgroundColor = 'orange';
+        });
+    </script>
+</body>
+</html>
