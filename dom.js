@@ -11,15 +11,15 @@ var additems = document.getElementsByClassName('title')[0];
 additems.style.color = 'green';
 additems.style.fontWeight = 'bold';
 
-var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+var thirdItem = document.querySelector('.list-group-item:nth-child(2)');
 thirdItem.style.color = 'green';
 
-var allEl = document.querySelectorAll('.list-group-item');
 
 
 
-var bytag = document.getElementsByTagName('li');
 
-for(var i = 0; i<bytag.length; i++){
-    bytag[i].style.border = '1px solid black';
+var allitems = document.querySelectorAll('li:nth-child(odd)');
+
+for(var i =0;i<allitems.length; i++){
+    allitems[i].style.backgroundColor  = 'green';
 }
